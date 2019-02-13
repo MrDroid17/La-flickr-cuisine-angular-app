@@ -32,6 +32,33 @@
         height: 100%;
         padding: 2%;
         border: 1px red solid;
-
+        
     }
 }
+
+.cuisine-info--basic{
+    border: 1px orangered solid;
+    
+}
+
+.cuisine-info--rating{
+    border: 1px green solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10px;
+    & .star {
+        font-size: 1.5rem;
+        color: #b0c4de;
+      }
+    & .filled {
+        color: #ff1e1e;
+      }
+    & .input-field{
+        width: 100%;
+    }
+}
+
+

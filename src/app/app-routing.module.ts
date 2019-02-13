@@ -6,8 +6,11 @@ import { LaCuisineComponent } from './la-cuisine/la-cuisine.component';
 import { CuisineDetailComponent } from './la-cuisine/cuisine-detail/cuisine-detail.component';
 
 const routes: Routes = [
-  { path: '', component: LaCuisineComponent },
-  { path: 'cuisine-detail', component: CuisineDetailComponent }
+  {path: '', component: LaCuisineComponent, children: [
+
+    { path: 'home', component: LaCuisineComponent },
+    { path: 'cuisine-detail', component: CuisineDetailComponent }
+  ] }
 ]
 
 @NgModule({

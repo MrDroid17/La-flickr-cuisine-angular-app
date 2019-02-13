@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
-import { MatCardModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatFormFieldControl } from '@angular/material';
+import { MatCardModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatInputModule } from '@angular/material';
+import {NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { FlickrFoodService } from './service/flickr-food.service';
@@ -25,9 +26,11 @@ import { CuisineDetailComponent } from './la-cuisine/cuisine-detail/cuisine-deta
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
+    MatInputModule,
     MatCardModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbRatingModule
   ],
   providers: [FlickrFoodService],
   bootstrap: [AppComponent]

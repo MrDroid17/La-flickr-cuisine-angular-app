@@ -2,11 +2,18 @@ import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FlickrFoodService {
+  // review form
+  reviewForm: FormGroup = new FormGroup({
+    rating: new FormControl(''),
+    user_name: new FormControl('', Validators.required),
+    reason: new FormControl('', [Validators.required]),
+  });
 
   result$: Observable<string[]>;
   key = 'e70fdfc8f3affd9537b6b42fa44f63f7';

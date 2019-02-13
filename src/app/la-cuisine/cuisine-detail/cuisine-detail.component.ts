@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FlickrFoodService } from '../../service/flickr-food.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cuisine-detail',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CuisineDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private flickrFoodService: FlickrFoodService,
+    private router:Router
+    ) { }
 
   ngOnInit() {
   }
+
+  onRatingSave(rating){
+
+  }
+
+
 
 }

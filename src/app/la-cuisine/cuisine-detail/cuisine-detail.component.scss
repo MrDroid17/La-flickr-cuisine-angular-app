@@ -1,0 +1,15 @@
+.container{
+    height: 100vh;
+    padding: 50px;
+    & .cuisine-detail{
+        margin: auto;
+        width: 60%;
+        height: 500px;
+        background: white;
+    }
+    & .mat-h2{
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+}

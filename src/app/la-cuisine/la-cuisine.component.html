@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 class="mat-h2">{{title}}</h2>
+  
+    <div class="cards">
+      <mat-card *ngFor="let cuisine of cuisine_array | slice:0:30">
+        <img md-card-image src="{{cuisine.url}}" [routerLink]="['/cuisine-detail']">
+        <mat-card-subtitle>{{cuisine.title}}</mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>

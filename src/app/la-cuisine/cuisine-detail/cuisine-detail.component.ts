@@ -16,7 +16,7 @@ export class CuisineDetailComponent implements OnInit {
   cuisine: Cuisine;
 
   constructor(
-    private flickrFoodService: FlickrFoodService,
+    public flickrFoodService: FlickrFoodService,
     private dataService: DataService,
     private router: Router
   ) {

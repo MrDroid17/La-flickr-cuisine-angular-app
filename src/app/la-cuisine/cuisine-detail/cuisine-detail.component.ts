@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FlickrFoodService } from '../../service/flickr-food.service';
 import { Router } from '@angular/router';
 import { Rating } from 'src/app/interface/rating';
+import { Cuisine } from '../../interface/cuisine';
+import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-cuisine-detail',
@@ -10,15 +12,20 @@ import { Rating } from 'src/app/interface/rating';
 })
 export class CuisineDetailComponent implements OnInit {
   currentRate;
-  rating: Object;
+  rating: object;
+  cuisine: Cuisine;
 
   constructor(
     private flickrFoodService: FlickrFoodService,
-    private router:Router
-    ) { }
+    private dataService: DataService,
+    private router: Router
+  ) {
+  }
 
   ngOnInit() {
     this.currentRate = 0;
+    this.cuisine = this.dataService.getCuisine();
+
   }
 
   onRatingSave(rating: Rating) {
@@ -27,12 +34,10 @@ export class CuisineDetailComponent implements OnInit {
       user_name: rating.user_name,
       reason: rating.reason
     }
-    // this.ratingEvent.emit(this.rating);
     this.flickrFoodService.reviewForm.reset();
+    this.dataService.setRating(this.currentRate);
+    this.dataService.setName(rating.user_name);
     this.router.navigate(['/home']);
 
-}
-
-
-
+  }
 }

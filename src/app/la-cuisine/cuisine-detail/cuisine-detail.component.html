@@ -1,13 +1,17 @@
 <div class="container">
         <h2 class="mat-h2">Cuisine Detail</h2>
         <div class="cuisine-detail mat-elevation-z4">
-            <h2 class="mat-h2">My Random image</h2>
+            <h2 class="mat-h2">{{cuisine.title}}</h2>
             <div class="cuisine">
                 <div class="cuisine-image mat-elevation-z1">
-                    <img src="https://farm8.staticflickr.com/7871/46359955664_949947d9cb.jpg" alt="Image not found">
+                    <img src="{{cuisine.url}}" alt="Image not found">
                 </div>
                 <div class="cuisine-info">
                     <div class="cuisine-info--basic">
+                        
+                        <h3 class="mat-h3">Family: {{cuisine.isfamily==0 ? 'No' : 'Yes'}}</h3>
+                        <h3 class="mat-h3">Friend: {{cuisine.isfriend==0 ? 'No' : 'Yes'}}</h3>
+                        <h3 class="mat-h3">Public: {{cuisine.ispublic==0 ? 'No' : 'Yes'}}</h3>
     
                     </div>
                     <div class="cuisine-info--rating mat-elevation-z2">

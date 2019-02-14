@@ -1,10 +1,13 @@
 <div class="container">
   <h2 class="mat-h2">{{title}}</h2>
   
-    <div class="cards">
-      <mat-card *ngFor="let cuisine of cuisine_array | slice:0:30">
-        <img md-card-image src="{{cuisine.url}}" [routerLink]="['/cuisine-detail']">
-        <mat-card-subtitle>{{cuisine.title}}</mat-card-subtitle>
+  <div class="cards">
+    <mat-card *ngFor="let cuisine of cuisine_array">
+      <img md-card-image src="{{cuisine.url}}" (click)="onImageClick(cuisine)">
+      <mat-card-subtitle>{{cuisine.title}}</mat-card-subtitle>
+      <h3 class="mat-h3"*ngIf="!rated_cuisine">Rating: {{rated_cuisine !== undefined ? rated_cuisine.rating*10 : 0 }}%</h3>
+      <h3 class="mat-h3"*ngIf="rated_cuisine">Rating: {{rated_cuisine.url == cuisine.url ? rated_cuisine.rating*10 : 0 }}% 
+        {{rated_cuisine.url == cuisine.url ? rated_cuisine.user_name : ''}}</h3>
       </mat-card>
     </div>
   </div>

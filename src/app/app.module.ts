@@ -12,14 +12,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { LaCuisineComponent } from './la-cuisine/la-cuisine.component';
 import { CuisineDetailComponent } from './la-cuisine/cuisine-detail/cuisine-detail.component';
 
+import { LaCuisineModule } from './la-cuisine/la-cuisine.module';
 @NgModule({
   declarations: [
-    AppComponent,
-    LaCuisineComponent,
-    CuisineDetailComponent,
+    AppComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
@@ -30,7 +29,8 @@ import { CuisineDetailComponent } from './la-cuisine/cuisine-detail/cuisine-deta
     MatInputModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    NgbRatingModule
+    NgbRatingModule,
+    LaCuisineModule
   ],
   providers: [FlickrFoodService],
   bootstrap: [AppComponent]

@@ -4,7 +4,7 @@
     & .cuisine-detail{
         margin: auto;
         width: 60%;
-        height: 500px;
+        height: 530px;
         background: white;
     }
     & .mat-h2{
@@ -21,7 +21,6 @@
         width: 36%;
         height: 100%;
         padding: 2%;
-        border: 1px blue solid;
         & img{
             width: 100%;
             height: 100%;
@@ -31,18 +30,15 @@
         width: 56%;
         height: 100%;
         padding: 2%;
-        border: 1px red solid;
 
     }
 }
 
 .cuisine-info--basic{
-    border: 1px orangered solid;
-    
+    text-align: center;
 }
 
 .cuisine-info--rating{
-    border: 1px green solid;
     margin-left: 10%;
     margin-right: 10%;
     align-content: center;

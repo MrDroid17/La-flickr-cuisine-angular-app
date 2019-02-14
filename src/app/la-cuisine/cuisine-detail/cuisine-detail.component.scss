@@ -3,7 +3,7 @@
     padding: 50px;
     & .cuisine-detail{
         margin: auto;
-        width: 60%;
+        width: 900px;
         height: 530px;
         background: white;
     }
@@ -54,5 +54,97 @@
       }
     & .input-field{
         width: 100%;
+    }
+}
+
+/**
+media queries
+*/
+
+@media (max-width: 1000px) {
+    .container-ng{
+        padding: 25px;
+        & .cuisine-detail{
+            margin: auto;
+            width: 90%;
+            height: 94vh;
+            background: white;
+        }
+        & .mat-h2{
+            text-align: center;
+            padding-top: 10px;
+            font-weight: 600;
+        }
+    }
+    .cuisine{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        & .cuisine-image{
+            width: 70%;
+            margin: auto;
+            height: 36vh;
+            padding: 2%;
+            & img{
+                width: 100%;
+                height: 98%;
+            }
+        }
+        & .cuisine-info{
+            width: 70%;
+            margin: auto;
+            height: 80%;
+            padding: 2%;
+
+        }
+    }
+}
+@media (max-width: 600px) {
+    .container-ng{
+        padding: 25px;
+        & .cuisine-detail{
+            margin: auto;
+            width: 96%;
+            height: 90vh;
+            background: white;
+        }
+        & .mat-h2{
+            text-align: center;
+            padding-top: 10px;
+            font-weight: 600;
+        }
+    }
+    .cuisine{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        & .cuisine-image{
+            width: 90%;
+            margin: auto;
+            height: 25vh;
+            padding: 2%;
+            & img{
+                width: 100%;
+                height: 98%;
+            }
+        }
+        & .cuisine-info{
+            width: 90%;
+            margin: auto;
+            height: 80%;
+            padding: 2%;
+
+        }
+    }
+    .cuisine-info--rating{
+        width: 98%;
+        margin: auto;
+        align-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 10px;
+    
     }
 }

@@ -46,4 +46,23 @@ export class LaCuisineComponent implements OnInit {
     this.router.navigate(['/cuisine-detail']);
 
   }
+
+  getProperTitle(title: string): string{
+    let proper_title = '';
+    if(title.length > 30){
+      proper_title = title.substring(0, 27) + '...';
+    }else{
+      proper_title = title;
+    }
+    return proper_title;
+  }
+  getRatedBy(url: string): string{
+    let rated_by = '';
+    if(url == this.rated_cuisine.url){
+      rated_by = `  by ${this.rated_cuisine.user_name}`
+    }else{
+      rated_by='';
+    }
+    return rated_by;
+  }
 }

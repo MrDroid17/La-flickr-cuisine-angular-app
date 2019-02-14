@@ -38,6 +38,15 @@ export class CuisineDetailComponent implements OnInit {
     this.dataService.setRating(this.currentRate);
     this.dataService.setName(rating.user_name);
     this.router.navigate(['/home']);
+  }
 
+  getProperTitle(title: string): string {
+    let proper_title = '';
+    if (title.split(' ').length > 4) {
+      proper_title = title.split(' ').slice(0, 4).join(' ');
+    } else {
+      proper_title = title;
+    }
+    return proper_title;
   }
 }

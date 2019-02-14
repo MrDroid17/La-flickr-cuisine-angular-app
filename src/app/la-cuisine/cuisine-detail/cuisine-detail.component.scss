@@ -135,7 +135,9 @@ media queries
             margin: auto;
             height: 80%;
             padding: 2%;
-
+            & .mat-h3{
+                margin-bottom: 2px;
+            }
         }
     }
     .cuisine-info--rating{
@@ -150,7 +152,7 @@ media queries
         & .rating {
             margin-bottom: 4px;
             margin-top: 4px;
-        }
+        }      
     
     }
 }

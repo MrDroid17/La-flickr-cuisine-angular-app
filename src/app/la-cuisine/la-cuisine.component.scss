@@ -18,12 +18,12 @@
 
   $transition: 0.3s ease-in-out all;
 
-.cards {
+.bt-cards {
     @include flex(row, wrap);
     justify-content: space-between;
     .mat-card {
-        width: 15%;
-        height: 180px;
+        width: 18%;
+        height: 200px;
         margin: 2% 0.5%;
         padding: 1%;
       img {

@@ -7,7 +7,7 @@
     [collectionSize]="array_length"
     aria-label="Default pagination"></ngb-pagination>
   </div>
-  <div class="cards">
+  <div class="bt-cards">
     <mat-card *ngFor="let cuisine of cuisine_array | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
       <img md-card-image src="{{cuisine.url}}" (click)="onImageClick(cuisine)">
       <mat-card-subtitle>{{cuisine.title}}</mat-card-subtitle>

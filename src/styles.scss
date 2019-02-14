@@ -2,12 +2,16 @@
 
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+html, body {
+    height: 100%;
+}
 .container-ng{
     background-color: #ededed;
 }
+
 
 .bt-layout-center{
     width: 100%;
     display: flex;
     justify-content: center;
-  }
+}

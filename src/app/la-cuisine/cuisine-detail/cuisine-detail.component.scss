@@ -1,5 +1,5 @@
 .container-ng{
-    height: 100vh;
+    height: 100%;
     padding: 50px;
     & .cuisine-detail{
         margin: auto;
@@ -106,7 +106,7 @@ media queries
         & .cuisine-detail{
             margin: auto;
             width: 96%;
-            height: 95vh;
+            height: 100%;
             background: white;
         }
         & .mat-h2{
@@ -123,7 +123,7 @@ media queries
         & .cuisine-image{
             width: 90%;
             margin: auto;
-            height: 25vh;
+            height: 25%;
             padding: 2%;
             & img{
                 width: 100%;
@@ -141,6 +141,8 @@ media queries
     .cuisine-info--rating{
         width: 98%;
         margin: auto;
+        margin-top: 4px;
+        margin-bottom: 4px;
         align-content: center;
         padding-left: 10%;
         padding-right: 10%;

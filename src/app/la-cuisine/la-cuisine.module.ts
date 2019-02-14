@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule, MatButtonModule, MatIconModule, MatCardModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from '../app-routing.module';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbRatingModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbRatingModule,
+    NgbPaginationModule
   ]
 })
 export class LaCuisineModule { }

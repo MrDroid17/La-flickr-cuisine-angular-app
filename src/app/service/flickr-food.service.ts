@@ -16,12 +16,12 @@ export class FlickrFoodService {
   });
 
   result$: Observable<string[]>;
-  key = 'e70fdfc8f3affd9537b6b42fa44f63f7';
+  API_KEY = 'e70fdfc8f3affd9537b6b42fa44f63f7';
   constructor(private http: Http) {}
 
   getResult(query: string) {
     const url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${this
-      .key}&tags=${query}&per_page=200&format=json&nojsoncallback=1`;
+      .API_KEY}&tags=${query}&per_page=200&format=json&nojsoncallback=1`;
     return this.http
       .get(url)
       .pipe(map(res => res.json()))

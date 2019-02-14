@@ -1,8 +1,14 @@
-<div class="container">
+<div class="container-ng">
   <h2 class="mat-h2">{{title}}</h2>
-  
+  <div class="bt-layout-center">
+    <ngb-pagination
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="array_length"
+    aria-label="Default pagination"></ngb-pagination>
+  </div>
   <div class="cards">
-    <mat-card *ngFor="let cuisine of cuisine_array">
+    <mat-card *ngFor="let cuisine of cuisine_array | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
       <img md-card-image src="{{cuisine.url}}" (click)="onImageClick(cuisine)">
       <mat-card-subtitle>{{cuisine.title}}</mat-card-subtitle>
       <h3 class="mat-h3"*ngIf="!rated_cuisine">Rating: {{rated_cuisine !== undefined ? rated_cuisine.rating*10 : 0 }}%</h3>

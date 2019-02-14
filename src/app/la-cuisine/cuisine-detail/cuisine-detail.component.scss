@@ -133,7 +133,7 @@ media queries
         & .cuisine-info{
             width: 90%;
             margin: auto;
-            height: 80%;
+            height: 90%;
             padding: 2%;
             & .mat-h3{
                 margin-bottom: 2px;
@@ -154,5 +154,25 @@ media queries
             margin-top: 4px;
         }      
     
+    }
+}
+
+@media (max-width: 450px) {
+    .container-ng{
+        & .cuisine-detail{
+            height: 800px;
+        }
+    }
+    .cuisine{
+        & .cuisine-image{
+            width: 90%;
+            margin: auto;
+            height: 150px;
+            padding: 2%;
+            & img{
+                width: 100%;
+                height: 98%;
+            }
+        }
     }
 }

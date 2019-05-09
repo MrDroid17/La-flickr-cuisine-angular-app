@@ -6,6 +6,8 @@
 ## Feature
 * User can also review and rate food on scale of 1 to 10. 
 * App Consist of two fully responsive page one for to see all the list of food with pagination and other one for details and rating.
+* Made Reusable component
+* Use of angular material
 
 ## Framework and Library uses
 * Agular 7.3.0

@@ -4,14 +4,6 @@
   justify-content: center;
 }
 
-@mixin scale($zoom) {
-  transition: $transition;
-  &:hover {
-      cursor: pointer;
-      transform: scale($zoom);
-  }
-}
-
 .mat-h2{
   text-align: center;
 }
@@ -26,19 +18,7 @@ $transition: 0.3s ease-in-out all;
       height: 250px;
       margin: 2% 0.5%;
       padding: 1%;
-    img {
-      width: 100%;
-      height: 75%;
-      margin: 0;
-      transition: $transition;
-      &:hover {
-        @include scale(1.02);
-      }
-    }
-    & .mat-card-subtitle{
-      margin-bottom: 4px;
-      margin-top: 6px;
-    }
+
   }
 }
 
@@ -46,7 +26,7 @@ $transition: 0.3s ease-in-out all;
   .bt-cards {
     .mat-card {
         width: 23%;
-        margin: 5% auto;
+        margin: 2% auto;
     }
   }
 }
@@ -55,7 +35,7 @@ $transition: 0.3s ease-in-out all;
   .bt-cards {
     .mat-card {
         width: 30%;
-        margin: 5% auto;
+        margin: 2% auto;
     }
   }
 }
@@ -64,7 +44,7 @@ $transition: 0.3s ease-in-out all;
   .bt-cards {
     .mat-card {
         width: 40%;
-        margin: 5% auto;
+        margin: 2% auto;
     }
   }
 }
@@ -73,7 +53,7 @@ $transition: 0.3s ease-in-out all;
   .bt-cards {
     .mat-card {
         width: 85%;
-        margin: 5% auto;
+        margin: 2% auto;
     }
   }
 }

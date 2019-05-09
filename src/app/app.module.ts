@@ -12,7 +12,7 @@ import { LaCuisineModule } from './la-cuisine/la-cuisine.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
   BrowserModule,

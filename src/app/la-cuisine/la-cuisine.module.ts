@@ -8,11 +8,13 @@ import { MatFormFieldModule, MatButtonModule, MatIconModule, MatCardModule, MatI
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from '../app-routing.module';
 import { NgbRatingModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { LaCuisineComponentComponent } from './la-cuisine-component/la-cuisine-component.component';
 
 @NgModule({
   declarations: [
     CuisineDetailComponent,
-    LaCuisineComponent
+    LaCuisineComponent,
+    LaCuisineComponentComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,10 @@
+<img md-card-image src="{{cuisine.url}}" (click)="onImageClick(cuisine)">
+<mat-card-subtitle>{{getProperTitle(cuisine.title)}}</mat-card-subtitle>
+<mat-card-subtitle *ngIf="!rated_cuisine">
+  <h3 class="mat-h3">Rating: {{rated_cuisine !== undefined ? rated_cuisine.rating*10 : 0 }}%</h3>
+</mat-card-subtitle>
+<mat-card-subtitle *ngIf="rated_cuisine">
+  <h3 class="mat-h3"*ngIf="rated_cuisine.rating !== NaN">Rating: {{rated_cuisine.url == cuisine.url ? rated_cuisine.rating*10 : 0 }}% 
+    {{getRatedBy(cuisine.url)}}</h3>
+  <h3 class="mat-h3"*ngIf="rated_cuisine.rating ===  NaN">Rating: {{rated_cuisine.url == cuisine.url ? 0*10 : 0 }}%</h3>
+</mat-card-subtitle>
